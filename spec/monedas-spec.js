@@ -24,7 +24,7 @@ describe("Comprobación del dinero", function() {
     it("Valores negativos, 0 y null no deben ser legales",
         function() {
             expect(monedas.esMonedaValida()).toBeFalse()
-                //expect(monedas.esMonedaValida(0)).toBeFalse()
+            expect(monedas.esMonedaValida(0)).toBeFalse()
                 //expect(monedas.esMonedaValida(-10)).toBeFalse()
         });
     it("Valor distinto de 0.05, 0.10, 0.20, 0.50, 1, 2, 5, 10, 20, 50, 100, 200 y 500 debe dar false",
