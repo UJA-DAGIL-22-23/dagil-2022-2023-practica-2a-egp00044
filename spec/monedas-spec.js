@@ -29,7 +29,7 @@ describe("Comprobación del dinero", function() {
         });
     it("Valor distinto de 0.05, 0.10, 0.20, 0.50, 1, 2, 5, 10, 20, 50, 100, 200 y 500 debe dar false",
         function() {
-            //expect(monedas.esMonedaValida(0.23)).toBeFalse()
+            expect(monedas.esMonedaValida(0.23)).toBeFalse()
         });
     it("Valor igual a uno de 0.05, 0.10, 0.20, 0.50, 1, 2, 5, 10, 20, 50, 100, 200 y 500 debe dar true",
         function() {
