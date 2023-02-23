@@ -34,8 +34,10 @@ var monedas = module.exports = {};
  * @param {real} valor Valor de la moneda/billete a comprobar 
  * @returns True si es un valor válido (0.01, 0..02, 0.5, 0.10...500.00); false en otro caso.
  */
-monedas.esMonedaValida = function (valor) {
+monedas.esMonedaValida = function(valor) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
+
+    return false;
 }
 
 /**
@@ -48,15 +50,15 @@ monedas.esMonedaValida = function (valor) {
  *          1, sin son válidas y permiten el pago.
  *          2, si son válidas, permiten el pago y admás sobra dinero.
  */
-monedas.suficienteParaPagar = function (vectorMonedas, montante) {
-       // Escribir el código necesario para que vayan pasando las pruebas una a una.
+monedas.suficienteParaPagar = function(vectorMonedas, montante) {
+    // Escribir el código necesario para que vayan pasando las pruebas una a una.
 }
 
 /*
-* ----------------------------------------
-* - Cödigo principal de la aplicación
-* ----------------------------------------
-*/
+ * ----------------------------------------
+ * - Cödigo principal de la aplicación
+ * ----------------------------------------
+ */
 
 console.log("Aplicación MONEDAS")
 console.log("==================")
@@ -64,7 +66,4 @@ console.log("==================")
 let conjuntoMonedas = [1, 2, 1, 2, .50, 20, 5]
 let aPagar = 10;
 let resultado = monedas.suficienteParaPagar(conjuntoMonedas, aPagar)
-console.log("Si intento pagar ", aPagar, "€"
-    , "con las siguientes monedas [", conjuntoMonedas.toString(),"]"
-    , ", el resultado es", resultado)
-
+console.log("Si intento pagar ", aPagar, "€", "con las siguientes monedas [", conjuntoMonedas.toString(), "]", ", el resultado es", resultado)
