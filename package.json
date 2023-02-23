@@ -1,0 +1,25 @@
+{
+  "name": "monedas_ejercicio_tdd_jasmine_node",
+  "version": "1.0.0",
+  "description": "Ejercicio TDD con node.js y jasmine",
+  "main": "monedas.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UJA-DAGIL-22-23/dagil-2022-2023-practica-2a-egp00044.git"
+  },
+  "keywords": [
+    "26112001"
+  ],
+  "author": "Elena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UJA-DAGIL-22-23/dagil-2022-2023-practica-2a-egp00044/issues"
+  },
+  "homepage": "https://github.com/UJA-DAGIL-22-23/dagil-2022-2023-practica-2a-egp00044#readme",
+  "devDependencies": {
+    "jasmine": "^4.5.0"
+  }
+}
