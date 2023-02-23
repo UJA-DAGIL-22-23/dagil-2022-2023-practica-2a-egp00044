@@ -34,7 +34,7 @@ describe("Comprobación del dinero", function() {
     it("Valor igual a uno de 0.05, 0.10, 0.20, 0.50, 1, 2, 5, 10, 20, 50, 100, 200 y 500 debe dar true",
         function() {
             expect(monedas.esMonedaValida(0.05)).toBeTrue()
-                //expect(monedas.esMonedaValida(0.10)).toBeTrue()
+            expect(monedas.esMonedaValida(0.10)).toBeTrue()
                 //expect(monedas.esMonedaValida(0.20)).toBeTrue()
                 //expect(monedas.esMonedaValida(0.50)).toBeTrue()
                 //expect(monedas.esMonedaValida(1)).toBeTrue()
