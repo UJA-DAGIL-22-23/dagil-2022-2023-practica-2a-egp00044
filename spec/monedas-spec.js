@@ -35,7 +35,7 @@ describe("Comprobación del dinero", function() {
         function() {
             expect(monedas.esMonedaValida(0.05)).toBeTrue()
             expect(monedas.esMonedaValida(0.10)).toBeTrue()
-                //expect(monedas.esMonedaValida(0.20)).toBeTrue()
+            expect(monedas.esMonedaValida(0.20)).toBeTrue()
                 //expect(monedas.esMonedaValida(0.50)).toBeTrue()
                 //expect(monedas.esMonedaValida(1)).toBeTrue()
                 //expect(monedas.esMonedaValida(2)).toBeTrue()
