@@ -53,10 +53,21 @@ monedas.esMonedaValida = function(valor) {
  *          -1, si alguna moneda no es válida; 
  *          0, si son válidas pero no se puede pagar; 
  *          1, sin son válidas y permiten el pago.
- *          2, si son válidas, permiten el pago y admás sobra dinero.
+ *          2, si son válidas, permiten el pago y además sobra dinero.
  */
 monedas.suficienteParaPagar = function(vectorMonedas, montante) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
+    let cantidadMonedas = vectorMonedas.length;
+    let sumatoria = 0;
+    let vectorCopia = [];
+    for (let i = 0; i < cantidadMonedas; i++) {
+        vectorCopia[i] = vectorMonedas[i];
+    }
+    for (let i = 0; i < cantidadMonedas; i++) {
+        if (vectorCopia[i] == vectorMonedas[i])
+            sumatoria++;
+    }
+    if (sumatoria == vectorMonedas.length) return -2;
 }
 
 /*
@@ -71,4 +82,4 @@ console.log("==================")
 let conjuntoMonedas = [1, 2, 1, 2, .50, 20, 5]
 let aPagar = 10;
 let resultado = monedas.suficienteParaPagar(conjuntoMonedas, aPagar)
-console.log("Si intento pagar ", aPagar, "€", "con las siguientes monedas [", conjuntoMonedas.toString(), "]", ", el resultado es", resultado)
+console.log("Si intento pagar ", aPagar, "€", "con las siguientes monedas [", conjuntoMonedas.toString(), "]", ", el resultado es ", resultado)
