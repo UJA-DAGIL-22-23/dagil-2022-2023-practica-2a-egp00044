@@ -44,6 +44,7 @@ monedas.esMonedaValida = function(valor) {
     if (valor == 0.10) return true;
     if (valor == 0.20) return true;
     if (valor == 0.50) return true;
+    if (valor == 1) return true;
 }
 
 /**
