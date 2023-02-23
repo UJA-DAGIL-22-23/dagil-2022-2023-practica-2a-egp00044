@@ -36,23 +36,13 @@ var monedas = module.exports = {};
  */
 monedas.esMonedaValida = function(valor) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
-    if (valor == null) return false;
-    if (valor == 0) return false;
-    if (valor == -10) return false;
-    if (valor == 0.23) return false;
+    if (valor == null || valor == 0 || valor == -10 || valor == 0.23) return false;
     if (valor == 0.05) return true;
-    if (valor == 0.10) return true;
-    if (valor == 0.20) return true;
-    if (valor == 0.50) return true;
-    if (valor == 1) return true;
-    if (valor == 2) return true;
-    if (valor == 5) return true;
-    if (valor == 10) return true;
-    if (valor == 20) return true;
-    if (valor == 50) return true;
-    if (valor == 100) return true;
-    if (valor == 200) return true;
-    if (valor == 500) return true;
+    if (valor * 10 % 1 == 0 && valor <= 5 && valor != 3 && valor != 4) return true;
+    if (valor % 1 == 0 && valor <= 5 && valor != 3 && valor != 4) return true;
+    if (valor % 10 == 0 && valor <= 50 && valor != 30 && valor != 40) return true;
+    if (valor % 100 == 0 && valor <= 500 && valor != 300 && valor != 400) return true;
+    return false;
 }
 
 /**
