@@ -38,6 +38,7 @@ monedas.esMonedaValida = function(valor) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
     if (valor == null) return false;
     if (valor == 0) return false;
+    if (valor == -10) return false;
 }
 
 /**
