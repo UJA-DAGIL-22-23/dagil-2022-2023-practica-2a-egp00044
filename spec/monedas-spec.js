@@ -98,9 +98,10 @@ describe("Pago de una factura:", function() {
     it("La suma del vector igual que el montante, devuelve 1",
         function() {
             // Escribe dos expect que para un vector de monedas válidas y un valor a pagar exactamente igual que la suma de dichas monedas, conpruebe que devuelve 1
+            expect(monedas.suficienteParaPagar([20, 10, 10, 5, 5, 2, 2, 1, 1, 0.50, 0.20, 0.05], 56.75)).toEqual(1)
+
         }
     );
-
     it("La suma del vector mayor que el montante, devuelve 2",
         function() {
             // Escribe dos expect que para un vector de monedas válidas y un valor a pagar menor que la suma de dichas monedas, conpruebe que devuelve 2
