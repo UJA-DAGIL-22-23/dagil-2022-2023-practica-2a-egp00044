@@ -107,6 +107,7 @@ describe("Pago de una factura:", function() {
         function() {
             // Escribe dos expect que para un vector de monedas válidas y un valor a pagar menor que la suma de dichas monedas, conpruebe que devuelve 2
             expect(monedas.suficienteParaPagar([50, 50, 20, 5, 5, 2, 0.50], 112.5)).toEqual(2)
+            expect(monedas.suficienteParaPagar([20, 50, 5, 5, 2, 2, 1, 1, 0.50, 0.20, 0.05], 56.75)).toEqual(2)
         }
     );
 });
