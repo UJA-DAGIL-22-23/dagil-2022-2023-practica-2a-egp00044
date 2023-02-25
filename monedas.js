@@ -57,24 +57,24 @@ monedas.esMonedaValida = function(valor) {
  */
 monedas.suficienteParaPagar = function(vectorMonedas, montante) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
+
     if (montante < 0) return -2;
     if (vectorMonedas == null && montante == 0) return 1;
     if (vectorMonedas == null && montante > 0) return 0;
 
-    let cantidadMonedas = vectorMonedas.length;
 
+    let cantidadMonedas = vectorMonedas.length;
     if (cantidadMonedas == 0 && montante == 0) return 1;
     if (cantidadMonedas == 0 && montante > 0) return 0;
 
+    let sumatoria = 0;
+
     for (let i = 0; i < cantidadMonedas; i++) {
         let correcto = monedas.esMonedaValida(vectorMonedas[i]);
+        sumatoria = sumatoria + vectorMonedas[i]
         if (correcto == false) return -1;
     }
 
-    let sumatoria = 0;
-    for (let i = 0; i < cantidadMonedas; i++) {
-        sumatoria = sumatoria + vectorMonedas[i];
-    }
     if (sumatoria < montante) return 0;
     if (sumatoria == montante) return 1;
     if (sumatoria > montante) return 2;
