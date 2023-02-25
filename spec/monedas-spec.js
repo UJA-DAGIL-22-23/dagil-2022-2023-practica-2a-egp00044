@@ -99,6 +99,7 @@ describe("Pago de una factura:", function() {
         function() {
             // Escribe dos expect que para un vector de monedas válidas y un valor a pagar exactamente igual que la suma de dichas monedas, conpruebe que devuelve 1
             expect(monedas.suficienteParaPagar([20, 10, 10, 5, 5, 2, 2, 1, 1, 0.50, 0.20, 0.05], 56.75)).toEqual(1)
+            expect(monedas.suficienteParaPagar([50, 20, 10, 10, 10, 5, 5, 2, 0.50], 112.5)).toEqual(1)
 
         }
     );
