@@ -71,6 +71,11 @@ monedas.suficienteParaPagar = function(vectorMonedas, montante) {
         if (correcto == false) return -1;
     }
 
+    let sumatoria = 0;
+    for (let i = 0; i < cantidadMonedas; i++) {
+        sumatoria = sumatoria + vectorMonedas[i];
+    }
+    if (sumatoria < montante) return 0;
 }
 
 /*
