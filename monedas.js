@@ -61,6 +61,9 @@ monedas.suficienteParaPagar = function(vectorMonedas, montante) {
     if (vectorMonedas == null && montante > 0) return 0;
 
     let cantidadMonedas = vectorMonedas.length;
+
+    if (cantidadMonedas == 0 && montante == 0) return 1;
+
     let sumatoria = 0;
     let vectorCopia = [];
     for (let i = 0; i < cantidadMonedas; i++) {
