@@ -36,7 +36,7 @@ var monedas = module.exports = {};
  */
 monedas.esMonedaValida = function(valor) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
-    if (valor == null || valor == 0 || valor == -10 || valor == 0.23) return false;
+    if (valor == null || valor <= 0 || valor == -10 || valor == 0.23) return false;
     if (valor == 0.05) return true;
     if (valor * 10 % 1 == 0 && valor <= 5 && valor != 3 && valor != 4) return true;
     if (valor % 1 == 0 && valor <= 5 && valor != 3 && valor != 4) return true;
@@ -53,12 +53,24 @@ monedas.esMonedaValida = function(valor) {
  *          -1, si alguna moneda no es válida; 
  *          0, si son válidas pero no se puede pagar; 
  *          1, sin son válidas y permiten el pago.
- *          2, si son válidas, permiten el pago y admás sobra dinero.
+ *          2, si son válidas, permiten el pago y además sobra dinero.
  */
 monedas.suficienteParaPagar = function(vectorMonedas, montante) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
     if (montante < 0) return -2;
-    return -12;
+    if (vectorMonedas == null && montante == 0) return 1;
+    if (vectorMonedas == null && montante > 0) return 0;
+
+    let cantidadMonedas = vectorMonedas.length;
+
+    if (cantidadMonedas == 0 && montante == 0) return 1;
+    if (cantidadMonedas == 0 && montante > 0) return 0;
+
+    for (let i = 0; i < cantidadMonedas; i++) {
+        let correcto = monedas.esMonedaValida(vectorMonedas[i]);
+        if (correcto == false) return -1;
+    }
+
 }
 
 /*
@@ -73,4 +85,4 @@ console.log("==================")
 let conjuntoMonedas = [1, 2, 1, 2, .50, 20, 5]
 let aPagar = 10;
 let resultado = monedas.suficienteParaPagar(conjuntoMonedas, aPagar)
-console.log("Si intento pagar ", aPagar, "€", "con las siguientes monedas [", conjuntoMonedas.toString(), "]", ", el resultado es", resultado)
+console.log("Si intento pagar ", aPagar, "€", "con las siguientes monedas [", conjuntoMonedas.toString(), "]", ", el resultado es ", resultado)
