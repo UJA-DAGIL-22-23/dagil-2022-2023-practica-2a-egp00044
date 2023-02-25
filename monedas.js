@@ -36,7 +36,7 @@ var monedas = module.exports = {};
  */
 monedas.esMonedaValida = function(valor) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
-    if (valor == null || valor == 0 || valor == -10 || valor == 0.23) return false;
+    if (valor == null || valor <= 0 || valor == -10 || valor == 0.23) return false;
     if (valor == 0.05) return true;
     if (valor * 10 % 1 == 0 && valor <= 5 && valor != 3 && valor != 4) return true;
     if (valor % 1 == 0 && valor <= 5 && valor != 3 && valor != 4) return true;
@@ -65,7 +65,10 @@ monedas.suficienteParaPagar = function(vectorMonedas, montante) {
     if (cantidadMonedas == 0 && montante == 0) return 1;
     if (cantidadMonedas == 0 && montante > 0) return 0;
 
-
+    for (let i = 0; i < cantidadMonedas; i++) {
+        let correcto = monedas.esMonedaValida(vectorMonedas[i]);
+        if (correcto == false) return -1;
+    }
 
     let sumatoria = 0;
     let vectorCopia = [];
