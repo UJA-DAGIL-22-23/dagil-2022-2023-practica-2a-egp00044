@@ -65,7 +65,7 @@ describe("Pago de una factura:", function() {
     it("Un montante negativo devuelve -2",
         function() {
             // Escribe el expect necesario
-            expect(monedas.suficienteParaPagar([0.05, 2, 15], 55.2)).toEqual(-2)
+            expect(monedas.suficienteParaPagar([0.05, 2, 20], 55.2)).toEqual(-2)
         }
     );
     it("Un vector vacío o nulo solo permite pagar montantes iguales a 0",
@@ -84,7 +84,8 @@ describe("Pago de una factura:", function() {
     it("Una moneda no válida en el vector, devuelve -1",
         function() {
             // Escribe el expect que para un vector conteniendo un valor de moneda negativo, devuelve -1
-            // Escribe el expect que para un vector conteniendo un valor de moneda positivo, pero no válido, devuelve -1
+            expect(monedas.suficienteParaPagar([10, 0.05, -5, 20], 46)).toEqual(-1)
+                // Escribe el expect que para un vector conteniendo un valor de moneda positivo, pero no válido, devuelve -1
         }
     );
     it("La suma del vector menor que el montante, devuelve 0",
