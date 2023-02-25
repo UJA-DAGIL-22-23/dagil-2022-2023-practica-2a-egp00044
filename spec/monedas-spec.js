@@ -71,9 +71,10 @@ describe("Pago de una factura:", function() {
     it("Un vector vacío o nulo solo permite pagar montantes iguales a 0",
         function() {
             // Escribe el expect que para los valores null y 0, devuelva 1
-            // Escribe el expect que para los valores null y un valor mayor que 0, devuelva 0
-            // Escribe el expect que para un vector vacío y 0, devuelva 1
-            // Escribe el expect que para un vector vacíoy un valor mayor que 0, devuelva 0
+            expect(monedas.suficienteParaPagar(null, 0)).toEqual(1)
+                // Escribe el expect que para los valores null y un valor mayor que 0, devuelva 0
+                // Escribe el expect que para un vector vacío y 0, devuelva 1
+                // Escribe el expect que para un vector vacíoy un valor mayor que 0, devuelva 0
 
         }
     );
