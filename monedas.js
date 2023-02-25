@@ -57,6 +57,8 @@ monedas.esMonedaValida = function(valor) {
  */
 monedas.suficienteParaPagar = function(vectorMonedas, montante) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
+    if (montante < 0) return -2;
+    return -12;
 }
 
 /*
