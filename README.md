@@ -3,6 +3,35 @@
 ### Ejercicio de TDD, usando Jasmine para Node
 
 ## Realización del ejercicio
+DATOS DEL ALUMNO********************************
+
+	-Nombre: 		Elena 
+	-Apellidos: 	Gómez Padilla
+	-Correo:		egp00044@red.ujaen.es
+	
+	-Salida de ejecutar la práctica: 
+
+PS C:\Users\elena\Desktop\Desarrollo_agil\Practicas\pr2\monedas_ejercicio_tdd_jasmine_node> npm test
+
+> monedas_ejercicio_tdd_jasmine_node@1.0.0 test
+> jasmine
+
+Aplicación MONEDAS
+==================
+Si intento pagar  10 € con las siguientes monedas [ 1,2,1,2,0.5,20,5 ] , el resultado es  2
+Randomized with seed 76777
+Started
+.........
+
+
+9 specs, 0 failures
+Finished in 0.026 seconds
+Randomized with seed 76777 (jasmine --random=true --seed=76777)
+
+
+************************************************
+
+
 Este ejercicio está pensado para hacerlo con Visual Studio Code, pero puedes en realidad hacerlo con cualquier editor.
 
 Necesitarás tener instalado Node.js para poder ejecutarlo. Por tanto, [descárgalo](https://nodejs.org/en/download/) e instálalo antes de hacer nada más.
